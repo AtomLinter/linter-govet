@@ -21,7 +21,7 @@ class LinterGovet extends Linter
     @subscriptions = new CompositeDisposable
 
     @subscriptions.add atom.config.observe 'linter-govet.goExecutablePath', (path) =>
-      @executablePath = atom.config.get 'linter-golint.goExecutablePath'
+      @executablePath = atom.config.get 'linter-govet.goExecutablePath'
 
   destroy: ->
     @subscriptions.dispose()
