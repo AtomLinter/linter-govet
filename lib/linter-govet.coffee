@@ -11,6 +11,8 @@ class LinterGovet extends Linter
 
   errorStream: 'stderr'
 
+  defaultLevel: 'warning'
+
   linterName: 'govet'
 
   regex: '.+?:(?<line>\\d+):((?<col>\\d+):)? (?<message>.+)'
