@@ -1,0 +1,19 @@
+{
+  "name": "linter-govet",
+  "linter-package": true,
+  "main": "./lib/init",
+  "version": "0.1.0",
+  "description": "Check Go files with go vet tool",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AtomLinter/linter-govet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AtomLinter/linter-govet/issues"
+  },
+  "homepage": "https://github.com/AtomLinter/linter-govet",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  }
+}
