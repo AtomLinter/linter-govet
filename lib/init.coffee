@@ -4,7 +4,7 @@ module.exports =
   config:
     executablePath:
       title: 'GO Executable Path'
-      description: 'Path where govet bin located'
+      description: 'The path where govet is located'
       type: 'string'
       default: ''
 
