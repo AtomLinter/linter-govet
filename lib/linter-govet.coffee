@@ -7,8 +7,6 @@ class LinterGovet extends Linter
 
   cmd: ['go', 'tool', 'vet', '-v']
 
-  executablePath: null
-
   errorStream: 'stderr'
 
   defaultLevel: 'warning'
@@ -17,15 +15,6 @@ class LinterGovet extends Linter
 
   regex: '.+?:(?<line>\\d+):((?<col>\\d+):)? (?<message>.+)'
 
-  constructor: (editor) ->
-    super(editor)
-
-    @subscriptions = new CompositeDisposable
-
-    @subscriptions.add atom.config.observe 'linter-govet.goExecutablePath', (path) =>
-      @executablePath = atom.config.get 'linter-govet.goExecutablePath'
-
-  destroy: ->
-    @subscriptions.dispose()
+  options: ['executablePath']
 
 module.exports = LinterGovet
