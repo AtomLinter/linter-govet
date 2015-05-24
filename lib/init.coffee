@@ -3,7 +3,7 @@ path = require 'path'
 module.exports =
   config:
     executablePath:
-      title: 'GO Executable Path'
+      title: 'Go Executable Path'
       description: 'The path where govet is located'
       type: 'string'
       default: ''

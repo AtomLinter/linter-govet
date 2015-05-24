@@ -15,7 +15,7 @@ $ apm install linter-govet
 You must configure linter-govet by editing ~/.atom/config.cson (choose Open Your Config in Atom menu):
 ```
 'linter-govet':
-  'goExecutablePath': path to Go executable. Use `which go` to find it out.
+  'executablePath': path to Go executable. Use `which go` to find it out.
 ```
 
 ## Contributing
