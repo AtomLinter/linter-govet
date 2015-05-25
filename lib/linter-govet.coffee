@@ -4,15 +4,30 @@ Linter = require "#{linterPath}/lib/linter"
 class LinterGovet extends Linter
   @syntax: ['source.go']
 
-  cmd: ['go', 'tool', 'vet', '-v']
+  defaultCmd: 'go tool vet'
+
+  cmd: null
 
   errorStream: 'stderr'
 
   linterName: 'govet'
 
-  regex: '.+?:(?<line>\\d+):((?<col>\\d+):)? (?<warning>.+)'
+  regex: '.+?:(?<line>\\d+):((?<col>\\d+):)?(?<warning>.+)'
 
-  options: ['executablePath']
+  options: ['executablePath', 'extraOptions']
+
+  constructor: (@editor) ->
+    super(@editor)
+
+    @cmd = @defaultCmd
+
+    keyPath = "linter-#{@linterName}.extraOptions"
+
+    @extraOptionsListener = atom.config.observe keyPath, =>
+      @cmd = "#{@defaultCmd} #{@extraOptions}"
+
+  destroy: ->
+    @extraOptionsListener.dispose()
 
   formatMessage: (match) ->
     match.warning
