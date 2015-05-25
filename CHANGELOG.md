@@ -1,3 +1,5 @@
+## 0.1.5
+* revert message level to 'error'
 ## 0.1.4
 * fix message level as 'warning'
 * add extraOptions setting to pass extra options to `vet`

@@ -12,7 +12,7 @@ class LinterGovet extends Linter
 
   linterName: 'govet'
 
-  regex: '.+?:(?<line>\\d+):((?<col>\\d+):)?(?<warning>.+)'
+  regex: '.+?:(?<line>\\d+):((?<col>\\d+):)?(?<error>.+)'
 
   options: ['executablePath', 'extraOptions']
 
@@ -30,6 +30,6 @@ class LinterGovet extends Linter
     @extraOptionsListener.dispose()
 
   formatMessage: (match) ->
-    match.warning
+    match.error
 
 module.exports = LinterGovet
