@@ -5,11 +5,9 @@ language: go
 matrix:
   include:
     - os: linux
-      rvm: 2.4.1
       env: ATOM_CHANNEL=stable
 
     - os: linux
-      rvm: 2.4.1
       env: ATOM_CHANNEL=beta
 
 before_script:
