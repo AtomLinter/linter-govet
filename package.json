@@ -2,7 +2,7 @@
   "name": "linter-govet",
   "linter-package": true,
   "main": "./lib/linter-govet",
-  "version": "0.1.5",
+  "version": "1.0.0",
   "private": true,
   "description": "Check Go files with go vet tool",
   "keywords": [
