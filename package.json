@@ -20,7 +20,7 @@
   "homepage": "https://github.com/AtomLinter/linter-govet",
   "license": "MIT",
   "engines": {
-    "atom": ">=0.174.0 <2.0.0"
+    "atom": ">=1.9.0 <2.0.0"
   },
   "configSchema": {
     "executablePath": {
