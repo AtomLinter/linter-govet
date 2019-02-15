@@ -17,7 +17,7 @@ defaults: &defaults
             --no-install-recommends golang
     - run:
         name: Go version
-        command: go --version
+        command: go version
     - run:
         name: Create VFB for Atom to run in
         command: /usr/local/bin/xvfb_start
