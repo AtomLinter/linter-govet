@@ -2,6 +2,8 @@
 
 language: go
 
+install: skip
+
 matrix:
   include:
     - os: linux
