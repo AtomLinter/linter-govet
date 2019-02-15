@@ -29,9 +29,14 @@
       "description": "The path to the `go` executable. Find by running `which go`",
       "default": "go"
     },
+    "verboseMode": {
+      "type": "boolean",
+      "default": true,
+      "description": "Verbose mode for `go vet` command"
+    },
     "extraOptions": {
       "type": "string",
-      "default": "-v",
+      "default": "",
       "description": "Options for `go vet` command"
     }
   },
